@@ -1,0 +1,60 @@
+{% extends 'base/main.html' %}
+{% load static %}
+{% block content %}
+<!-- contact section start -->
+<section class="contact" id="contact">
+<div class="contact-content">
+    <div class="column left">
+  			  <div class="text">Get in Touch</div>
+  			  <div class="icons">
+                <div class="row">
+          				<i class="fas fa-user"></i>
+          				<div class="sub-title"> Silpa Das </div>
+          			</div>
+
+          			<div class="row">
+          				<i class="fas fa-map-marker-alt"></i>
+          				<div class="sub-title"> Pune,Maharashtra </div>
+          			</div>
+
+          			<div class="row">
+          				<i class="fas fa-envelope"></i>
+          				<div class="sub-title"> mailtosilpadas@gmail.com </div>
+          			</div>
+  			   </div>
+          <div class="text">Let's get Social</div>
+           <div class="icons">
+                 <div class="row">
+                   <i class="fa fa-facebook"></i>
+                   <i class="fa fa-linkedin"></i>
+                   <i class="fa fa-instagram"></i>
+           			</div>
+            </div>
+
+    </div>
+    <div class="column right">
+            <div class="text">Drop me a message </div>
+              <form id="contact-form" method="POST" action="{% url 'send_email' %}">
+                {% csrf_token %}
+            <a name="contact"></a>
+
+              <label>Name</label>
+              <input required class="input-field" type="text" name="name">
+
+              <label>Subject</label>
+              <input required class="input-field" type="text" name="subject">
+
+              <label>Email</label>
+              <input required class="input-field" type="text" name="email">
+
+              <label>Message</label>
+              <textarea required class="input-field" name="message"></textarea>
+
+              <div class="button">
+              <button type="submit">Send message</button>
+              </div>
+            </form>
+    </div>
+</div>
+</section>
+{% endblock %}

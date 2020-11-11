@@ -1,0 +1,18 @@
+{% extends 'base/main.html' %}
+{% block content %}
+<!-- Certifications section -->
+
+<section class="certs" id="certs">
+
+  {% for cert in certs %}
+            <div>
+              <p class="cert-intro"> {{cert.headline}}
+                <p class="cert-details">{{cert.sub_headline}} </p>
+              </p>
+              <a href="{{cert.thumbnail.url}}">View Certificate</a>
+            </div>
+
+  {% endfor %}
+</section>
+
+{% endblock %}

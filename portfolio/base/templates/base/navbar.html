@@ -1,0 +1,14 @@
+<nav class="navbar" role="navigation">
+	<div class="max-width">
+		<div class="logo">
+			<a href="{% url 'home' %}">Portfo<span>lio.</span></a>
+		</div>
+
+		<ul class="menu nav navbar-nav" >
+			<li><a class="nav-link active menu-btn" href="{% url 'aboutme' %}">About</a> </li>
+			<li><a class="nav-link active menu-btn" href="{% url 'skills' %}">Skills</a>
+			<li><a class="nav-link active menu-btn" href="{% url 'certs' %}">Certifications</a>
+			<li><a class="nav-link active menu-btn" href="{% url 'contact' %}">Contact</a>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,26 @@
+{% extends 'base/main.html' %}
+{% block content %}
+{% load static %}
+<!-- about section start -->
+
+<section class="about" id="about">
+	<div class="max-width">
+		<div class="about-content">
+			<div class="column left">
+				<img class="profile_pic" src="{% static 'images/profile_pic.jpeg' %}">
+			</div>
+
+			<div class="column right">
+				<p>Professionally connected with Information Technology for past 2 years.</p><br>
+        <p>Well organised person, problem solver, perfectionist, stylemaker, genuine, well timed
+           and strong believer of Karma.</p><br>
+
+        <p>While I'm not coding, you would find me posing for pictures, diving into web series or probably
+          checking out online shopping sites.</p><br>
+
+				<a href="{% static 'resume.pdf' %}">Download Resume</a>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
